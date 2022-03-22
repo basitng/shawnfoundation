@@ -4,6 +4,8 @@ import _NavBar from "./components/NavBar";
 import HomePage from "./pages/Home";
 import { Fab } from "@mui/material";
 import { ColorizeOutlined } from "@mui/icons-material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DonatePage from "./pages/Donate";
 function App() {
   const theme = createTheme({
     palette: {
@@ -23,8 +25,12 @@ function App() {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <_NavBar />
-        <HomePage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/donate" element={<DonatePage />} />
+          </Routes>
+        </BrowserRouter>
         <Fab
           sx={{ position: "fixed", bottom: "10%", right: "3%" }}
           variant="circular"

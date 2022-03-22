@@ -14,11 +14,12 @@
 body,
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   color: #2d3748;
 }
-.gallery{
+.gallery {
   width: 100%;
 }
 .container--2 {
@@ -119,7 +120,21 @@ body {
 .hero-center header :is(.header--h3, .header--p) {
   color: #fff !important;
 }
+.form {
+}
+.donation--container-banner {
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(-50%, -50%);
+  background-image: url("./assets/images/package.jpg");
+}
 @media screen and (max-width: 600px) {
+  .donation--container {
+    margin-top: 10rem !important;
+  }
   .responsive-h3 {
     width: 398px !important;
     font-size: 35px !important;

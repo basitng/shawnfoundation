@@ -1,6 +1,7 @@
 import { EmojiEmotions } from "@mui/icons-material";
 import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function _Banner() {
   return (
@@ -24,6 +25,8 @@ export default function _Banner() {
           color="secondary"
           size="large"
           sx={{ marginTop: 2 }}
+          component={Link}
+          to="/donate"
         >
           Donate Now
         </Button>

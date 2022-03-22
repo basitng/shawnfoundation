@@ -14,9 +14,12 @@ import {
   ShoppingBagSharp,
   SportsOutlined,
   ThumbUpOffAlt,
+  FacebookOutlined,
+  Google,
+  Twitter,
 } from "@mui/icons-material";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   Button,
   Container,
@@ -29,10 +32,11 @@ import {
 } from "@mui/material";
 import React from "react";
 import _Banner from "../components/Banner";
+import _NavBar from "../components/NavBar";
 import _IconCard from "../components/Cards/iconCard";
 import Img from "../assets/images/good_man.jpg";
 import _SimpleCard from "../components/Cards/SimpleCard";
-import { orange } from "@mui/material/colors";
+import { blue, orange, red } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import img1 from "../assets/images/asian.jpg";
 import img2 from "../assets/images/good_man.jpg";
@@ -63,8 +67,9 @@ export default function HomePage() {
   ];
   return (
     <div>
+      <_NavBar />
       <_Banner />
-      <Container className="container">
+      <Container className="container" id="about">
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
             <_IconCard
@@ -141,7 +146,7 @@ export default function HomePage() {
           </Grid>
         </Grid>
       </div>
-      <Container className="container responsive-m">
+      <Container id="dreams" className="container responsive-m">
         <Grid
           container
           justifyContent={"space-between"}
@@ -231,7 +236,12 @@ export default function HomePage() {
         </Grid>
       </Container>
       <Box className="hero-center">
-        <Grid container justifyContent="center" alignItems="center">
+        <Grid
+          id="gallery"
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
           <header>
             <Typography
               sx={{ textAlign: "center" }}
@@ -269,7 +279,17 @@ export default function HomePage() {
       </Box>
 
       <Container className="container responsive-m">
-        <Grid container spacing={2}>
+        <Grid container spacing={2} justifyContent="center">
+          <header>
+            <Typography
+              sx={{ textAlign: "center", m: 6 }}
+              className={"header--h3 responsive-h3"}
+              variant="h3"
+            >
+              Let's Come Together{" "}
+              <span style={{ color: orange[600] }}>As One !</span>
+            </Typography>
+          </header>
           <Hidden smDown>
             <ImageList variant="masonry" cols={3} gap={8}>
               {itemData.map((item) => (
@@ -286,12 +306,47 @@ export default function HomePage() {
           <Hidden smUp>
             {itemData.map((item) => (
               <Grid item xs={12}>
-                <LazyLoadImage effect="blur"  src={item.img} className={"gallery"} />
+                <LazyLoadImage
+                  effect="blur"
+                  src={item.img}
+                  className={"gallery"}
+                />
               </Grid>
             ))}
           </Hidden>
         </Grid>
       </Container>
+
+      <Box sx={{ width: "100%", background: "#111", pt: 10, pb: 10 }}>
+        <Grid container justifyContent={"center"} spacing={2}>
+          <header>
+            <Typography
+              sx={{ textAlign: "center" }}
+              className={"header--h3 responsive-h3"}
+              variant="h3"
+            >
+              Get In Touch With Us{" "}
+              <span style={{ color: orange[600] }}>Today On!</span>
+            </Typography>
+            <center>
+              <IconButton>
+                <FacebookOutlined sx={{ color: blue[400], fontSize: 50 }} />
+              </IconButton>
+              <IconButton>
+                <Google sx={{ fontSize: 50, color: red[500] }} />
+              </IconButton>
+              <IconButton>
+                <Twitter color="primary" sx={{ fontSize: 50 }} />
+              </IconButton>
+            </center>
+          </header>
+        </Grid>
+      </Box>
+      <footer style={{ width: "100%", background: "#111", pt: 10, pb: 10 }}>
+        <Typography variant="body1" sx={{ textAlign: "center", p: 3 }}>
+          All right reserved.2022 &copy; Basitng
+        </Typography>
+      </footer>
     </div>
   );
 }
