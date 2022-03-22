@@ -31,14 +31,6 @@ function App() {
             <Route path="/donate" element={<DonatePage />} />
           </Routes>
         </BrowserRouter>
-        <Fab
-          sx={{ position: "fixed", bottom: "10%", right: "3%" }}
-          variant="circular"
-          color="secondary"
-          aria-label="add"
-        >
-          <ColorizeOutlined sx={{}} />
-        </Fab>
       </ThemeProvider>
     </React.Fragment>
   );
