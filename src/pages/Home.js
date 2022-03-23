@@ -1,3 +1,4 @@
+import { Link, NavLink, useLocation } from "react-router-dom";
 import {
   ArrowForwardIos,
   ArrowForwardIosOutlined,
@@ -138,7 +139,12 @@ export default function HomePage() {
               color="secondary"
               sx={{ mt: 2 }}
             >
-              Continue
+              <a
+                style={{ textDecoration: "none", color: orange[400] }}
+                href="#dreams"
+              >
+                Continue
+              </a>
             </Button>
           </Grid>
           <Grid item xs={12} md={7}>
@@ -177,6 +183,8 @@ export default function HomePage() {
               color="secondary"
               disableElevation
               endIcon={<ArrowForwardIos />}
+              component={Link}
+              to="/donate"
             >
               Donate Now
             </Button>
@@ -318,7 +326,7 @@ export default function HomePage() {
       </Container>
 
       <Box sx={{ width: "100%", background: "#111", pt: 10, pb: 10 }}>
-        <Grid container justifyContent={"center"} spacing={2}>
+        <Grid id="contact" container justifyContent={"center"} spacing={2}>
           <header>
             <Typography
               sx={{ textAlign: "center" }}

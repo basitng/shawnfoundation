@@ -34,6 +34,10 @@ body {
   padding-bottom: 5rem;
 }
 .hover-to-green {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "poppins";
+  margin: 1rem;
   color: #eee !important;
   transition: cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s;
 }

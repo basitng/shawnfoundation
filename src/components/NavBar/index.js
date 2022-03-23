@@ -17,19 +17,21 @@ import {
   Language,
   Menu,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom";
-
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { green } from "@mui/material/colors";
 export default function _NavBar() {
+  const location = useLocation();
+  console.log(location.pathname);
   const [menuOpen, setMenuOpen] = useState(false);
   const handleOpen = () => setMenuOpen(true);
   const routes = [
-    { name: "Home", path: "/", id: Math.random() * 10000 },
+    { name: "Home", path: "#home", id: Math.random() * 10000 },
     { name: "About us", path: "#about", id: Math.random() * 10000 },
     { name: "Dreams", path: "#dreams", id: Math.random() * 10000 },
     { name: "Gallery", path: "#gallery", id: Math.random() * 10000 },
   ];
   const actionRoutes = [
-    { name: "Contact Us", path: "#contact", id: Math.random() * 10000 },
+    { name: "6153588948", path: "#contact", id: Math.random() * 10000 },
     { name: "Donate", path: "/donate", id: Math.random() * 10000 },
   ];
   console.log(menuOpen);
@@ -52,14 +54,9 @@ export default function _NavBar() {
         <Hidden smDown>
           <Box sx={{ display: "flex", flexDirection: "row", ml: 5 }}>
             {routes.map((route) => (
-              <Typography
-                sx={{ margin: 2, cursor: "pointer" }}
-                className="hover-to-green"
-                component={Link}
-                to={route.path}
-              >
+              <a className="hover-to-green" href={route.path}>
                 {route.name}
-              </Typography>
+              </a>
             ))}
           </Box>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
