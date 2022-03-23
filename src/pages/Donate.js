@@ -16,10 +16,13 @@ import {
   PersonAddOutlined,
   MoneyOutlined,
   ArrowForwardIosOutlined,
+  CardGiftcardOutlined,
   EmailOutlined,
+  PaymentOutlined,
 } from "@mui/icons-material";
 import { usePaystackPayment } from "react-paystack";
 import { useNavigate } from "react-router-dom";
+import _IconCard from "../components/Cards/iconCard";
 
 export default function DonatePage() {
   const [values, setValues] = React.useState({
@@ -85,15 +88,41 @@ export default function DonatePage() {
       )}
 
       <Grid item xs={12} md={6}>
-        <Grid container spacing={2} sx={{ p: 2 }} className="form">
-          <header style={{ width: "70%", paddingLeft: "2rem" }}>
+        <Grid
+          container
+          justifyContent={"center"}
+          spacing={2}
+          sx={{ p: 2 }}
+          className="form"
+        >
+          <header style={{ width: "90%" }}>
             <Typography>Hi Dear</Typography>
             <Typography className={"header--h3 responsive-h3"} variant="h3">
               Donate To{" "}
               <span style={{ color: orange[600] }}>Shawn Foundation Today</span>
             </Typography>
           </header>
+          <Typography sx={{ width: "90%" }}>
+            <b>Notice</b> We no longer accept online payment because of our
+            recent security policy. Thanks for your understanding
+          </Typography>
           <Grid item xs={12} md={6}>
+            <_IconCard
+              icon={
+                <CardGiftcardOutlined color="secondary" sx={{ fontSize: 30 }} />
+              }
+              title={"Bank Transfer"}
+              content={"Account number: 435054412789. Bank: Bank Of America"}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <_IconCard
+              icon={<PaymentOutlined color="secondary" sx={{ fontSize: 30 }} />}
+              title={"PayPal"}
+              content={"Address: alicestephen884@gmail.com"}
+            />
+          </Grid>
+          {/* <Grid item xs={12} md={6}>
             <TextField
               label="Name"
               required
@@ -167,8 +196,8 @@ export default function DonatePage() {
                 ),
               }}
             />
-          </Grid>
-          <Grid item xs={12} md={12}>
+          </Grid> */}
+          {/* <Grid item xs={12} md={12}>
             <Button
               variant="contained"
               color="primary"
@@ -179,7 +208,7 @@ export default function DonatePage() {
             >
               Donate
             </Button>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Grid>
       <Hidden smDown>

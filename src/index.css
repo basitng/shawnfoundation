@@ -137,7 +137,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .donation--container {
-    margin-top: 10rem !important;
+    margin-top: 4rem !important;
   }
   .responsive-h3 {
     width: 398px !important;

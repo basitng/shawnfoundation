@@ -55,16 +55,22 @@ export default function _SideBar({ menuState, setMenuState }) {
   const classes = useStyles();
   const location = useLocation();
 
+  const handleClose = () => {
+    setOpen(false);
+    setMenuState(false);
+  };
+
   const CustomList = ({ to, primary, icon, badge }) => (
     <ListItem
       button
-      component={Link}
-      to={to}
       selected={to === location.pathname}
       className={classes.li}
+      onClick={handleClose}
       classes={{ root: classes.root, selected: classes.selected }}
     >
-      <ListItemText primary={primary} />
+      <a href={to} style={{ textDecoration: "none", color: "#555" }}>
+        <ListItemText primary={primary} />
+      </a>
     </ListItem>
   );
   React.useEffect(() => {
@@ -84,7 +90,8 @@ export default function _SideBar({ menuState, setMenuState }) {
           paper: classes.sideBar,
         }}
         variant="temporary"
-        hideBackdrop={true}
+        hideBackdrop={false}
+        onClose={handleClose}
       >
         <List className={classes.ul}>
           <CustomList to="/" primary="Home" />
