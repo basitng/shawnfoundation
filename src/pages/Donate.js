@@ -19,6 +19,8 @@ import {
   CardGiftcardOutlined,
   EmailOutlined,
   PaymentOutlined,
+  Route,
+  Dvr,
 } from "@mui/icons-material";
 import { usePaystackPayment } from "react-paystack";
 import { useNavigate } from "react-router-dom";
@@ -120,6 +122,20 @@ export default function DonatePage() {
               icon={<PaymentOutlined color="secondary" sx={{ fontSize: 30 }} />}
               title={"PayPal"}
               content={"Address: alicestephen884@gmail.com"}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <_IconCard
+              icon={<Route color="secondary" sx={{ fontSize: 30 }} />}
+              title={"Routine Number"}
+              content={"051000017"}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <_IconCard
+              icon={<Dvr color="secondary" sx={{ fontSize: 30 }} />}
+              title={"Paper & Electronic"}
+              content={"026009593"}
             />
           </Grid>
           {/* <Grid item xs={12} md={6}>
