@@ -119,10 +119,8 @@ export default function DonatePage() {
               }
             />
             <_IconCard
-              icon={
-                <CardGiftcardOutlined color="secondary" sx={{ fontSize: 30 }} />
-              }
-              title={"PaymentOutlined"}
+              icon={<PaymentOutlined color="secondary" sx={{ fontSize: 30 }} />}
+              title={"PayPal"}
               content={"Address: alicestephen884@gmail.com"}
             />
           </Grid>
