@@ -352,7 +352,7 @@ export default function HomePage() {
       </Box>
       <footer style={{ width: "100%", background: "#111", pt: 10, pb: 10 }}>
         <Typography variant="body1" sx={{ textAlign: "center", p: 3 }}>
-          All right reserved.2022 &copy; Basitng
+          All right reserved.2022 &copy; Shawn Foundation
         </Typography>
       </footer>
     </div>

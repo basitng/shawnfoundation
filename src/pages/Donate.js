@@ -118,12 +118,19 @@ export default function DonatePage() {
                 "Account number: 435054412789. Bank: Bank Of America. Routine Number: 051000017. Paper & Electronic: 026009593"
               }
             />
+            <_IconCard
+              icon={
+                <CardGiftcardOutlined color="secondary" sx={{ fontSize: 30 }} />
+              }
+              title={"PaymentOutlined"}
+              content={"Address: alicestephen884@gmail.com"}
+            />
           </Grid>
           <Grid item xs={12} md={6}>
             <_IconCard
-              icon={<PaymentOutlined color="secondary" sx={{ fontSize: 30 }} />}
-              title={"Zella"}
-              content={"Address: +352 398-2601. Venmo: @Dominique0078"}
+              icon={<Route color="secondary" sx={{ fontSize: 30 }} />}
+              title={"Zelle"}
+              content={"Address: +1352 398-2601. Venmo: @Dominique0078"}
             />
           </Grid>
 
