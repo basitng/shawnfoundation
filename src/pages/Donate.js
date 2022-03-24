@@ -114,30 +114,19 @@ export default function DonatePage() {
                 <CardGiftcardOutlined color="secondary" sx={{ fontSize: 30 }} />
               }
               title={"Bank Transfer"}
-              content={"Account number: 435054412789. Bank: Bank Of America"}
+              content={
+                "Account number: 435054412789. Bank: Bank Of America. Routine Number: 051000017. Paper & Electronic: 026009593"
+              }
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <_IconCard
               icon={<PaymentOutlined color="secondary" sx={{ fontSize: 30 }} />}
-              title={"PayPal"}
-              content={"Address: alicestephen884@gmail.com"}
+              title={"Zella"}
+              content={"Address: +352 398-2601. Venmo: @Dominique0078"}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
-            <_IconCard
-              icon={<Route color="secondary" sx={{ fontSize: 30 }} />}
-              title={"Routine Number"}
-              content={"051000017"}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <_IconCard
-              icon={<Dvr color="secondary" sx={{ fontSize: 30 }} />}
-              title={"Paper & Electronic"}
-              content={"026009593"}
-            />
-          </Grid>
+
           {/* <Grid item xs={12} md={6}>
             <TextField
               label="Name"
